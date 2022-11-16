@@ -1,38 +1,61 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-repeat:no-repeat;
+  margin-bottom: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1{
   color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+}
+p{
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+}
+h2{
+  color: white;
+  font-size: 120px;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+  margin-top:-20px;
 }
 
-.App-link {
-  color: #61dafb;
+#btns{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
 }
+button{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 45px;
+  border-width: 1px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+}
+button:hover{
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,57,1) 100%);
+  cursor: pointer;
+  animation-duration: 2s;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+#reset-btn{
+  width:120px;
+  height: 120px;
+  margin-top: 14px;
+}
+#adding-btn, #minus-btn{
+  width:90px;
+  height: 90px;
+  margin-top: 14px;
 }
