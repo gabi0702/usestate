@@ -22,13 +22,13 @@ const Counter = () => {
       <p>The counter is at: </p>
       <h2>{count}</h2>
       <div id="btns">
-        <button onClick={minusOne}>
+        <button onClick={minusOne} title="Less one">
           <img id="minus-btn" src={minus} alt="add button" />
         </button>
-        <button onClick={resetCount}>
+        <button onClick={resetCount} title="Reset counter">
           <img id="reset-btn" src={reset} alt="reset button" />
         </button>
-        <button onClick={addOne}>
+        <button onClick={addOne} title="Add one">
           {" "}
           <img id="adding-btn" src={add} alt="add button" />
         </button>
