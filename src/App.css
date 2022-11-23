@@ -24,6 +24,7 @@ h2{
   font-weight: bold;
   font-family:'Courier New', Courier, monospace;
   margin-top:-20px;
+  margin-bottom:50px;
 }
 
 #btns{
@@ -58,4 +59,51 @@ button:hover{
   height: 90px;
   margin-top: 14px;
 }
+input{
+  margin-top:3em;
+  border-radius: 30px;
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+}
 
+
+@keyframes scale-up-hor-left {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 0% 0%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 0% 0%;
+    font-weight: 200;
+    color:red;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+    font-weight: 800;
+    color:blue;
+  }
+}
+#alert-dv{
+	  animation: scale-up-hor-left 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-duration: 10s;
+
+    font-size: 40px;
+    font-weight:200;
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 30px;
+  }

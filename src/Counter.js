@@ -4,23 +4,36 @@ import reset from "./reset.png";
 import add from "./add.png";
 import minus from "./minus.png";
 
-const Counter = () => {
+const Counter = (props) => {
   let [count, setCount] = useState(0);
 
+  const delta = props.delta;
+  const maximum = props.maxNum;
+
   function addOne() {
-    setCount(count + 1);
+    if (maximum < count + delta) {
+      document.getElementById("alert-dv").innerHTML =
+        "You can't pass the maximum sum! Try again!";
+      setCount(0);
+    } else {
+      document.getElementById("alert-dv").innerHTML = "";
+      setCount(count + delta);
+    }
   }
   function minusOne() {
-    setCount(count - 1);
+    document.getElementById("alert-dv").innerHTML = "";
+    setCount(count - delta);
   }
   function resetCount() {
-    setCount((count = 0));
+    document.getElementById("alert-dv").innerHTML = "";
+
+    setCount(0);
   }
   return (
     <div>
-      <h1>Counter App</h1>
       <p>The counter is at: </p>
       <h2>{count}</h2>
+
       <div id="btns">
         <button onClick={minusOne} title="Less one">
           <img id="minus-btn" src={minus} alt="add button" />
@@ -33,6 +46,7 @@ const Counter = () => {
           <img id="adding-btn" src={add} alt="add button" />
         </button>
       </div>
+      <div id="alert-dv"></div>
     </div>
   );
 };
