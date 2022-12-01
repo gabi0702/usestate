@@ -100,10 +100,17 @@ label{
 #alert-dv{
 	  animation: scale-up-hor-left 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation-duration: 10s;
-
     font-size: 40px;
     font-weight:200;
     color: red;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 30px;
   }
+  #stck{
+  display: flex;
+  justify-content: center;
+}
+  .txt1{
+    font-size: 20px;
+  }
+
